@@ -9,14 +9,16 @@ public class percobaan2 {
         System.out.print("Pangkat: ");
         int Pangkat = sc.nextInt();
 
-        System.out.println(hitungPangkat(bilangan, Pangkat));
+        System.out.println(hitungPangkat(bilangan, Pangkat, 1));
     }
 
-    static int hitungPangkat(int x, int y) {
+    static int hitungPangkat(int x, int y, int hasilhipo ) {
         if (y == 0) {
-            return (1);
+            System.out.print("1 = ");
+            return hasilhipo;
         } else {
-            return (x * hitungPangkat(x, y - 1));
+            System.out.print(x + " x ");
+            return hitungPangkat(x, y - 1, hasilhipo * x);
         }
     }
     
